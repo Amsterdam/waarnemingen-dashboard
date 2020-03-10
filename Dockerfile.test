@@ -1,0 +1,20 @@
+FROM amsterdam/python:3.8-slim-buster-minimal
+
+WORKDIR /install
+ADD requirements.txt requirements.txt
+ADD requirements_dev.txt requirements_dev.txt
+
+RUN pip install -r requirements_dev.txt
+
+WORKDIR /deploy
+ADD deploy .
+
+WORKDIR /tests
+ADD tests .
+
+RUN chown -R datapunt:datapunt /tests
+
+USER datapunt
+ENV HOME /tmp
+
+CMD ["pytest"]

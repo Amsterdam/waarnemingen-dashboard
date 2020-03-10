@@ -1,0 +1,44 @@
+apiVersion: 1
+
+datasources:
+- name: voertuigen
+  type: postgres
+  access: proxy
+  url: ${DATABASE_VOERTUIGEN_HOST}:${DATABASE_VOERTUIGEN_PORT}
+  user: $DATABASE_VOERTUIGEN_USER
+  database: $DATABASE_VOERTUIGEN_DATABASE
+  secureJsonData:
+    password: $DATABASE_VOERTUIGEN_PASSWORD
+  jsonData:
+    postgresVersion: 1100
+    sslmode: disable
+    timescaledb: true
+  editable: false
+
+- name: mensen
+  type: postgres
+  access: proxy
+  url: ${DATABASE_MENSEN_HOST}:${DATABASE_MENSEN_PORT}
+  user: $DATABASE_MENSEN_USER
+  database: $DATABASE_MENSEN_DATABASE
+  secureJsonData:
+    password: $DATABASE_MENSEN_PASSWORD
+  jsonData:
+    postgresVersion: 1100
+    sslmode: disable
+    timescaledb: false
+  editable: false
+
+- name: boten
+  type: postgres
+  access: proxy
+  url: ${DATABASE_BOTEN_HOST}:${DATABASE_BOTEN_PORT}
+  user: $DATABASE_BOTEN_USER
+  database: $DATABASE_BOTEN_DATABASE
+  secureJsonData:
+    password: $DATABASE_BOTEN_PASSWORD
+  jsonData:
+    postgresVersion: 1100
+    sslmode: disable
+    timescaledb: true
+  editable: false
