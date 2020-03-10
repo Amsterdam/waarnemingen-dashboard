@@ -21,6 +21,9 @@ upgrade: requirements install       ## Run 'requirements' and 'install' targets
 build:
 	$(dc) build
 
+pull:
+	$(dc) pull
+
 push:
 	$(dc) push
 
