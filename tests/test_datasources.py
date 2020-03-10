@@ -21,5 +21,4 @@ class TestDatasources:
         assert match["type"] == 'postgres'
         assert match["database"] == datasource["name"]
         assert match["password"] == ""
-        assert match["jsonData"] == ""
         assert match["access"] == 'proxy'

@@ -16,5 +16,6 @@ RUN chown -R datapunt:datapunt /tests
 
 USER datapunt
 ENV HOME /tmp
+ENV COVERAGE_FILE=/tmp/.coverage
 
 CMD ["pytest"]
