@@ -34,7 +34,6 @@ pipeline {
 
         stage('Build') {
             steps {
-                sh 'make pull'
                 sh 'make build'
             }
         }
