@@ -86,6 +86,13 @@ services:
       - DATABASE_BOTEN_USER=boten_read
       - DATABASE_BOTEN_PASSWORD=boten
       - DATABASE_BOTEN_DATABASE=boten
+
+      - GF_AUTH_GENERIC_OAUTH_ENABLED=true
+      - GF_AUTH_GENERIC_OAUTH_CLIENT_ID=foo
+      - GF_AUTH_GENERIC_OAUTH_CLIENT_SECRET=bar
+      - GF_AUTH_GENERIC_OAUTH_AUTH_URL="https://iam.amsterdam.nl/auth/realms/datapunt-acc/protocol/openid-connect/auth"
+      - GF_AUTH_GENERIC_OAUTH_TOKEN_URL="https://iam.amsterdam.nl/auth/realms/datapunt-acc/protocol/openid-connect/token"
+      - GF_AUTH_GENERIC_OAUTH_API_URL="https://iam.amsterdam.nl/auth/realms/datapunt-acc/protocol/openid-connect/userinfo"
     volumes:
       - data:/var/lib/grafana
       - ./provisioning/datasources:/etc/grafana/provisioning/datasources:ro
