@@ -116,5 +116,5 @@ services:
       PYTEST_ADDOPTS:
     depends_on:
       - app
-    entrypoint: /deploy/wait-for-it.sh app:3000 --
+    entrypoint: /deploy/wait-for-it.sh -t 30 app:3000 --
     command: pytest
