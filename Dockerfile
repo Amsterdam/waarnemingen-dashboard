@@ -34,7 +34,7 @@ ARG GF_INSTALL_PLUGINS=""
 
 RUN echo ${GF_INSTALL_PLUGINS}
 
-RUN if [ ! -z "${GF_INSTALL_PLUGINS}" ]; then \
+RUN if [ -n "${GF_INSTALL_PLUGINS}" ]; then \
     OLDIFS=$IFS; \
         IFS=','; \
     for plugin in ${GF_INSTALL_PLUGINS}; do \
