@@ -48,4 +48,3 @@ ADD provisioning/datasources /etc/grafana/provisioning/datasources
 ADD dashboards /var/lib/grafana/dashboards
 
 ADD deploy /deploy
-ENV GF_SERVER_ROOT_URL https://acc.api.data.amsterdam.nl/waarnemingen/dashboard
