@@ -1,3 +1,6 @@
+# Pinned on the beta because of:
+# https://github.com/grafana/grafana/pull/22285
+# When 6.7 is out of beta, remove this pin
 FROM grafana/grafana:6.7.0-beta1-ubuntu
 
 USER root
