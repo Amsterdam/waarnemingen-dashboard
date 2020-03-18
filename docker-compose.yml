@@ -88,11 +88,11 @@ services:
       - DATABASE_BOTEN_DATABASE=boten
 
       - GF_AUTH_GENERIC_OAUTH_ENABLED=true
-      - GF_AUTH_GENERIC_OAUTH_CLIENT_ID=foo
-      - GF_AUTH_GENERIC_OAUTH_CLIENT_SECRET=bar
-      - GF_AUTH_GENERIC_OAUTH_AUTH_URL="https://iam.amsterdam.nl/auth/realms/datapunt-acc/protocol/openid-connect/auth"
-      - GF_AUTH_GENERIC_OAUTH_TOKEN_URL="https://iam.amsterdam.nl/auth/realms/datapunt-acc/protocol/openid-connect/token"
-      - GF_AUTH_GENERIC_OAUTH_API_URL="https://iam.amsterdam.nl/auth/realms/datapunt-acc/protocol/openid-connect/userinfo"
+      - GF_AUTH_GENERIC_OAUTH_CLIENT_ID
+      - GF_AUTH_GENERIC_OAUTH_CLIENT_SECRET
+      - GF_AUTH_GENERIC_OAUTH_AUTH_URL
+      - GF_AUTH_GENERIC_OAUTH_TOKEN_URL
+      - GF_AUTH_GENERIC_OAUTH_API_URL
     volumes:
       - data:/var/lib/grafana
       - ./provisioning/datasources:/etc/grafana/provisioning/datasources:ro
@@ -116,5 +116,5 @@ services:
       PYTEST_ADDOPTS:
     depends_on:
       - app
-    entrypoint: /deploy/wait-for-it.sh app:3000 --
+    entrypoint: /deploy/wait-for-it.sh -s -t 30 app:3000 --
     command: pytest
