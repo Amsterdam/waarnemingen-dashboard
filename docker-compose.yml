@@ -42,7 +42,7 @@ services:
       POSTGRES_PASSWORD: boten
 
   app:
-    image: repo.data.amsterdam.nl/datapunt/waarnemingen-dashboard:${VERSION:-latest}
+    image: docker-registry.data.amsterdam.nl/datapunt/waarnemingen-dashboard:${VERSION:-latest}
     build: 
       context: .
       args:
