@@ -60,6 +60,7 @@ pipeline {
                 stage('Deploy to acceptance') {
                     when { environment name: 'IS_RELEASE_BRANCH', value: 'true' }
                     steps {
+                        sh 'VERSION=acceptance make push'
                         build job: 'Subtask_Openstack_Playbook', parameters: [
                             string(name: 'PLAYBOOK', value: PLAYBOOK),
                             string(name: 'INVENTORY', value: "acceptance"),
@@ -74,6 +75,7 @@ pipeline {
                 stage('Deploy to production') {
                     when { buildingTag() }
                     steps {
+                        sh 'VERSION=production make push'
                         build job: 'Subtask_Openstack_Playbook', parameters: [
                             string(name: 'PLAYBOOK', value: PLAYBOOK),
                             string(name: 'INVENTORY', value: "production"),
