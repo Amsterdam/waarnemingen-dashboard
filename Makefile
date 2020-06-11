@@ -24,7 +24,7 @@ build:
 pull:
 	$(dc) pull
 
-push:
+push: build
 	$(dc) push
 
 app:
