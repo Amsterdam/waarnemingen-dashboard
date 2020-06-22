@@ -5,17 +5,17 @@
 #    pip-compile --output-file=requirements_dev.txt requirements_dev.in
 #
 attrs==19.3.0             # via pytest
-backcall==0.1.0           # via ipython
-certifi==2020.4.5.1       # via requests
+backcall==0.2.0           # via ipython
+certifi==2020.6.20        # via requests
 chardet==3.0.4            # via requests
 coverage==5.1             # via pytest-cov
 decorator==4.4.2          # via ipython, traitlets
 idna==2.9                 # via requests
 ipdb==0.13.2              # via -r requirements_dev.in
 ipython-genutils==0.2.0   # via traitlets
-ipython==7.14.0           # via ipdb
-jedi==0.17.0              # via ipython
-more-itertools==8.3.0     # via pytest
+ipython==7.15.0           # via ipdb
+jedi==0.17.1              # via ipython
+more-itertools==8.4.0     # via pytest
 packaging==20.4           # via pytest
 parso==0.7.0              # via jedi
 pexpect==4.8.0            # via ipython
@@ -23,16 +23,16 @@ pickleshare==0.7.5        # via ipython
 pluggy==0.13.1            # via pytest
 prompt-toolkit==3.0.5     # via ipython
 ptyprocess==0.6.0         # via pexpect
-py==1.8.1                 # via pytest
+py==1.8.2                 # via pytest
 pygments==2.6.1           # via ipython
 pyparsing==2.4.7          # via packaging
-pytest-cov==2.9.0         # via -r requirements_dev.in
-pytest==5.4.2             # via -r requirements_dev.in, pytest-cov
-requests==2.23.0          # via -r requirements_dev.in
+pytest-cov==2.10.0        # via -r requirements_dev.in
+pytest==5.4.3             # via -r requirements_dev.in, pytest-cov
+requests==2.24.0          # via -r requirements_dev.in
 six==1.15.0               # via packaging, traitlets
 traitlets==4.3.3          # via ipython
 urllib3==1.25.9           # via requests
-wcwidth==0.1.9            # via prompt-toolkit, pytest
+wcwidth==0.2.4            # via prompt-toolkit, pytest
 
 # The following packages are considered to be unsafe in a requirements file:
 # setuptools
