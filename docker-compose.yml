@@ -95,8 +95,8 @@ services:
       - GF_AUTH_GENERIC_OAUTH_API_URL
 
       - GF_SMTP_ENABLED=true
-      - GF_SMTP_HOST=dev
-      - GF_SMTP_USER=dev
+      - GF_SMTP_HOST=smtp.sendgrid.net:587
+      - GF_SMTP_USER=apikey
       - GF_SMTP_PASSWORD=dev
       - GF_SMTP_FROM_ADDRESS=noreply@amsterdam.nl
       - GF_SMTP_FROM_NAME=Waarnemingen Grafana Dashboard

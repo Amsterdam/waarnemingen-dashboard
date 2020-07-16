@@ -58,7 +58,12 @@ pipeline {
                 }
 
                 stage('Deploy to acceptance') {
-                    when { environment name: 'IS_RELEASE_BRANCH', value: 'true' }
+                    when {
+                        anyOf {
+                            environment name: 'IS_RELEASE_BRANCH', value: 'true'
+                            branch 'master'
+                        }
+                    }
                     steps {
                         sh 'VERSION=acceptance make push'
                         build job: 'Subtask_Openstack_Playbook', parameters: [
