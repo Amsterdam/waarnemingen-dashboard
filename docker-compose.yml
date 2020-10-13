@@ -93,6 +93,7 @@ services:
       - GF_AUTH_GENERIC_OAUTH_AUTH_URL
       - GF_AUTH_GENERIC_OAUTH_TOKEN_URL
       - GF_AUTH_GENERIC_OAUTH_API_URL
+      - GF_AUTH_GENERIC_OAUTH_SCOPES=openid profile email
 
       - GF_SMTP_ENABLED=true
       - GF_SMTP_HOST=smtp.sendgrid.net:587
