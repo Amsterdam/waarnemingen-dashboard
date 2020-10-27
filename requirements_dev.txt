@@ -11,7 +11,7 @@ chardet==3.0.4            # via requests
 coverage==5.3             # via pytest-cov
 decorator==4.4.2          # via ipython
 idna==2.10                # via requests
-iniconfig==1.0.1          # via pytest
+iniconfig==1.1.1          # via pytest
 ipdb==0.13.4              # via -r requirements_dev.in
 ipython-genutils==0.2.0   # via traitlets
 ipython==7.18.1           # via ipdb
@@ -21,18 +21,18 @@ parso==0.7.1              # via jedi
 pexpect==4.8.0            # via ipython
 pickleshare==0.7.5        # via ipython
 pluggy==0.13.1            # via pytest
-prompt-toolkit==3.0.7     # via ipython
+prompt-toolkit==3.0.8     # via ipython
 ptyprocess==0.6.0         # via pexpect
 py==1.9.0                 # via pytest
-pygments==2.7.1           # via ipython
+pygments==2.7.2           # via ipython
 pyparsing==2.4.7          # via packaging
 pytest-cov==2.10.1        # via -r requirements_dev.in
 pytest==6.1.1             # via -r requirements_dev.in, pytest-cov
 requests==2.24.0          # via -r requirements_dev.in
 six==1.15.0               # via packaging
 toml==0.10.1              # via pytest
-traitlets==5.0.4          # via ipython
-urllib3==1.25.10          # via requests
+traitlets==5.0.5          # via ipython
+urllib3==1.25.11          # via requests
 wcwidth==0.2.5            # via prompt-toolkit
 
 # The following packages are considered to be unsafe in a requirements file:
