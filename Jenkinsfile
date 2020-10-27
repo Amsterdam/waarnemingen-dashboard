@@ -59,7 +59,7 @@ pipeline {
                     string(name: 'INVENTORY', value: "acceptance"),
                     string(
                         name: 'PLAYBOOKPARAMS',
-                        value: "-e deployversion=${VERSION} cmdb_id=${CMDB_ID}"
+                        value: "-e 'deployversion=${VERSION} cmdb_id=${CMDB_ID}'"
                     )
                 ], wait: true
             }
@@ -76,7 +76,7 @@ pipeline {
                     string(name: 'INVENTORY', value: "production"),
                     string(
                         name: 'PLAYBOOKPARAMS',
-                        value: "-e deployversion=${VERSION} cmdb_id=${CMDB_ID}"
+                        value: "-e 'deployversion=${VERSION} cmdb_id=${CMDB_ID}'"
                     )
                 ], wait: true
 
