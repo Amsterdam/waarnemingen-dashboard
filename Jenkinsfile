@@ -2,6 +2,7 @@
 def PROJECT_NAME = "waarnemingen-dashboard"
 def SLACK_CHANNEL = '#waarnemingen-deployments'
 def PLAYBOOK = 'deploy.yml'
+def CMDB_ID = 'app_waarnemingen-dashboard'
 def SLACK_MESSAGE = [
     "title_link": BUILD_URL,
     "fields": [
@@ -60,7 +61,7 @@ pipeline {
                     string(name: 'INVENTORY', value: "acceptance"),
                     string(
                         name: 'PLAYBOOKPARAMS',
-                        value: "-e deployversion=${VERSION} cmdb_id=app_waarnemingen-dashboard"
+                        value: "-e deployversion=${VERSION} cmdb_id=${CMDB_ID}"
                     )
                 ], wait: true
             }
@@ -80,7 +81,7 @@ pipeline {
                     string(name: 'INVENTORY', value: "production"),
                     string(
                         name: 'PLAYBOOKPARAMS',
-                        value: "-e deployversion=${VERSION} cmdb_id=app_waarnemingen-dashboard"
+                        value: "-e deployversion=${VERSION} cmdb_id=${CMDB_ID}"
                     )
                 ], wait: true
 
