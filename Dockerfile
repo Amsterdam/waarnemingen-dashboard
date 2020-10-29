@@ -1,7 +1,4 @@
-# Pinned on the beta because of:
-# https://github.com/grafana/grafana/pull/22285
-# When 6.7 is out of beta, remove this pin
-FROM grafana/grafana:6.7.0-beta1-ubuntu
+FROM grafana/grafana:7.3.0-ubuntu
 
 USER root
 
@@ -10,7 +7,7 @@ ARG GF_INSTALL_IMAGE_RENDERER_PLUGIN="false"
 ENV GF_PATHS_PLUGINS="/var/lib/grafana-plugins"
 
 RUN mkdir -p "$GF_PATHS_PLUGINS" && \
-    chown -R grafana:grafana "$GF_PATHS_PLUGINS"
+    chown -R grafana "$GF_PATHS_PLUGINS"
 
 RUN if [ $GF_INSTALL_IMAGE_RENDERER_PLUGIN = "true" ]; then \
     echo "http://dl-cdn.alpinelinux.org/alpine/edge/community" >> /etc/apk/repositories && \
