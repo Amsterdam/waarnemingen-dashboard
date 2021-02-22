@@ -4,35 +4,66 @@
 #
 #    pip-compile --output-file=requirements_dev.txt requirements_dev.in
 #
-attrs==20.3.0             # via pytest
-backcall==0.2.0           # via ipython
-certifi==2020.12.5        # via requests
-chardet==4.0.0            # via requests
-coverage==5.4             # via pytest-cov
-decorator==4.4.2          # via ipython
-idna==2.10                # via requests
-iniconfig==1.1.1          # via pytest
-ipdb==0.13.4              # via -r requirements_dev.in
-ipython-genutils==0.2.0   # via traitlets
-ipython==7.20.0           # via ipdb
-jedi==0.18.0              # via ipython
-packaging==20.9           # via pytest
-parso==0.8.1              # via jedi
-pexpect==4.8.0            # via ipython
-pickleshare==0.7.5        # via ipython
-pluggy==0.13.1            # via pytest
-prompt-toolkit==3.0.14    # via ipython
-ptyprocess==0.7.0         # via pexpect
-py==1.10.0                # via pytest
-pygments==2.7.4           # via ipython
-pyparsing==2.4.7          # via packaging
-pytest-cov==2.11.1        # via -r requirements_dev.in
-pytest==6.2.2             # via -r requirements_dev.in, pytest-cov
-requests==2.25.1          # via -r requirements_dev.in
-toml==0.10.2              # via pytest
-traitlets==5.0.5          # via ipython
-urllib3==1.26.3           # via requests
-wcwidth==0.2.5            # via prompt-toolkit
+attrs==20.3.0
+    # via pytest
+backcall==0.2.0
+    # via ipython
+certifi==2020.12.5
+    # via requests
+chardet==4.0.0
+    # via requests
+coverage==5.4
+    # via pytest-cov
+decorator==4.4.2
+    # via ipython
+idna==2.10
+    # via requests
+iniconfig==1.1.1
+    # via pytest
+ipdb==0.13.4
+    # via -r requirements_dev.in
+ipython-genutils==0.2.0
+    # via traitlets
+ipython==7.20.0
+    # via ipdb
+jedi==0.18.0
+    # via ipython
+packaging==20.9
+    # via pytest
+parso==0.8.1
+    # via jedi
+pexpect==4.8.0
+    # via ipython
+pickleshare==0.7.5
+    # via ipython
+pluggy==0.13.1
+    # via pytest
+prompt-toolkit==3.0.16
+    # via ipython
+ptyprocess==0.7.0
+    # via pexpect
+py==1.10.0
+    # via pytest
+pygments==2.8.0
+    # via ipython
+pyparsing==2.4.7
+    # via packaging
+pytest-cov==2.11.1
+    # via -r requirements_dev.in
+pytest==6.2.2
+    # via
+    #   -r requirements_dev.in
+    #   pytest-cov
+requests==2.25.1
+    # via -r requirements_dev.in
+toml==0.10.2
+    # via pytest
+traitlets==5.0.5
+    # via ipython
+urllib3==1.26.3
+    # via requests
+wcwidth==0.2.5
+    # via prompt-toolkit
 
 # The following packages are considered to be unsafe in a requirements file:
 # setuptools
