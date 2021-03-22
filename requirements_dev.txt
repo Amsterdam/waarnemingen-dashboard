@@ -20,7 +20,7 @@ idna==2.10
     # via requests
 iniconfig==1.1.1
     # via pytest
-ipdb==0.13.5
+ipdb==0.13.7
     # via -r requirements_dev.in
 ipython-genutils==0.2.0
     # via traitlets
@@ -38,7 +38,7 @@ pickleshare==0.7.5
     # via ipython
 pluggy==0.13.1
     # via pytest
-prompt-toolkit==3.0.16
+prompt-toolkit==3.0.17
     # via ipython
 ptyprocess==0.7.0
     # via pexpect
@@ -57,10 +57,12 @@ pytest==6.2.2
 requests==2.25.1
     # via -r requirements_dev.in
 toml==0.10.2
-    # via pytest
+    # via
+    #   ipdb
+    #   pytest
 traitlets==5.0.5
     # via ipython
-urllib3==1.26.3
+urllib3==1.26.4
     # via requests
 wcwidth==0.2.5
     # via prompt-toolkit
