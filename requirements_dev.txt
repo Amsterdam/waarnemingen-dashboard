@@ -14,7 +14,7 @@ chardet==4.0.0
     # via requests
 coverage==5.5
     # via pytest-cov
-decorator==4.4.2
+decorator==5.0.7
     # via ipython
 idna==2.10
     # via requests
@@ -24,13 +24,13 @@ ipdb==0.13.7
     # via -r requirements_dev.in
 ipython-genutils==0.2.0
     # via traitlets
-ipython==7.21.0
+ipython==7.22.0
     # via ipdb
 jedi==0.18.0
     # via ipython
 packaging==20.9
     # via pytest
-parso==0.8.1
+parso==0.8.2
     # via jedi
 pexpect==4.8.0
     # via ipython
@@ -38,7 +38,7 @@ pickleshare==0.7.5
     # via ipython
 pluggy==0.13.1
     # via pytest
-prompt-toolkit==3.0.17
+prompt-toolkit==3.0.18
     # via ipython
 ptyprocess==0.7.0
     # via pexpect
@@ -50,7 +50,7 @@ pyparsing==2.4.7
     # via packaging
 pytest-cov==2.11.1
     # via -r requirements_dev.in
-pytest==6.2.2
+pytest==6.2.3
     # via
     #   -r requirements_dev.in
     #   pytest-cov
