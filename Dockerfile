@@ -1,8 +1,9 @@
-FROM grafana/grafana:7.3.0-ubuntu
+FROM grafana/grafana:7.5.4
 
 USER root
 
-ARG GF_INSTALL_IMAGE_RENDERER_PLUGIN="false"
+# Docs: https://grafana.com/docs/grafana/latest/installation/docker/#build-with-grafana-image-renderer-plugin-pre-installed
+ARG GF_INSTALL_IMAGE_RENDERER_PLUGIN="true"
 
 ENV GF_PATHS_PLUGINS="/var/lib/grafana-plugins"
 
