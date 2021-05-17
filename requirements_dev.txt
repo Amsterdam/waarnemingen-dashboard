@@ -4,7 +4,7 @@
 #
 #    pip-compile --output-file=requirements_dev.txt requirements_dev.in
 #
-attrs==20.3.0
+attrs==21.2.0
     # via pytest
 backcall==0.2.0
     # via ipython
@@ -12,9 +12,9 @@ certifi==2020.12.5
     # via requests
 chardet==4.0.0
     # via requests
-coverage==5.5
+coverage[toml]==5.5
     # via pytest-cov
-decorator==5.0.7
+decorator==5.0.9
     # via ipython
 idna==2.10
     # via requests
@@ -24,9 +24,11 @@ ipdb==0.13.7
     # via -r requirements_dev.in
 ipython-genutils==0.2.0
     # via traitlets
-ipython==7.22.0
+ipython==7.23.1
     # via ipdb
 jedi==0.18.0
+    # via ipython
+matplotlib-inline==0.1.2
     # via ipython
 packaging==20.9
     # via pytest
@@ -44,13 +46,13 @@ ptyprocess==0.7.0
     # via pexpect
 py==1.10.0
     # via pytest
-pygments==2.8.1
+pygments==2.9.0
     # via ipython
 pyparsing==2.4.7
     # via packaging
-pytest-cov==2.11.1
+pytest-cov==2.12.0
     # via -r requirements_dev.in
-pytest==6.2.3
+pytest==6.2.4
     # via
     #   -r requirements_dev.in
     #   pytest-cov
@@ -58,10 +60,13 @@ requests==2.25.1
     # via -r requirements_dev.in
 toml==0.10.2
     # via
+    #   coverage
     #   ipdb
     #   pytest
 traitlets==5.0.5
-    # via ipython
+    # via
+    #   ipython
+    #   matplotlib-inline
 urllib3==1.26.4
     # via requests
 wcwidth==0.2.5
