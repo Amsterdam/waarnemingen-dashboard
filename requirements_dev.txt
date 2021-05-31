@@ -8,23 +8,25 @@ attrs==21.2.0
     # via pytest
 backcall==0.2.0
     # via ipython
-certifi==2020.12.5
+certifi==2021.5.30
     # via requests
 chardet==4.0.0
     # via requests
 coverage[toml]==5.5
     # via pytest-cov
 decorator==5.0.9
-    # via ipython
+    # via
+    #   ipdb
+    #   ipython
 idna==2.10
     # via requests
 iniconfig==1.1.1
     # via pytest
-ipdb==0.13.7
+ipdb==0.13.8
     # via -r requirements_dev.in
 ipython-genutils==0.2.0
     # via traitlets
-ipython==7.23.1
+ipython==7.24.0
     # via ipdb
 jedi==0.18.0
     # via ipython
@@ -67,7 +69,7 @@ traitlets==5.0.5
     # via
     #   ipython
     #   matplotlib-inline
-urllib3==1.26.4
+urllib3==1.26.5
     # via requests
 wcwidth==0.2.5
     # via prompt-toolkit
