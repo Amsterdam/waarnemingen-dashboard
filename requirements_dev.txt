@@ -10,7 +10,7 @@ backcall==0.2.0
     # via ipython
 certifi==2021.5.30
     # via requests
-chardet==4.0.0
+charset-normalizer==2.0.4
     # via requests
 coverage==5.5
     # via pytest-cov
@@ -18,7 +18,7 @@ decorator==5.0.9
     # via
     #   ipdb
     #   ipython
-idna==2.10
+idna==3.2
     # via requests
 iniconfig==1.1.1
     # via pytest
@@ -26,13 +26,13 @@ ipdb==0.13.9
     # via -r requirements_dev.in
 ipython-genutils==0.2.0
     # via traitlets
-ipython==7.25.0
+ipython==7.26.0
     # via ipdb
 jedi==0.18.0
     # via ipython
 matplotlib-inline==0.1.2
     # via ipython
-packaging==20.9
+packaging==21.0
     # via pytest
 parso==0.8.2
     # via jedi
@@ -58,7 +58,7 @@ pytest==6.2.4
     # via
     #   -r requirements_dev.in
     #   pytest-cov
-requests==2.25.1
+requests==2.26.0
     # via -r requirements_dev.in
 toml==0.10.2
     # via
