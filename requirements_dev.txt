@@ -24,7 +24,7 @@ iniconfig==1.1.1
     # via pytest
 ipdb==0.13.9
     # via -r requirements_dev.in
-ipython==7.31.0
+ipython==7.31.1
     # via ipdb
 jedi==0.18.1
     # via ipython
@@ -50,12 +50,12 @@ pygments==2.11.2
     # via ipython
 pyparsing==3.0.6
     # via packaging
-pytest-cov==3.0.0
-    # via -r requirements_dev.in
 pytest==6.2.5
     # via
     #   -r requirements_dev.in
     #   pytest-cov
+pytest-cov==3.0.0
+    # via -r requirements_dev.in
 requests==2.27.1
     # via -r requirements_dev.in
 toml==0.10.2
