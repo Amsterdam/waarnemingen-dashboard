@@ -10,11 +10,11 @@ attrs==21.4.0
     # via pytest
 backcall==0.2.0
     # via ipython
-certifi==2021.10.8
+certifi==2022.5.18.1
     # via requests
 charset-normalizer==2.0.12
     # via requests
-coverage[toml]==6.3.2
+coverage[toml]==6.4
     # via pytest-cov
 decorator==5.1.1
     # via
@@ -28,7 +28,7 @@ iniconfig==1.1.1
     # via pytest
 ipdb==0.13.9
     # via -r requirements_dev.in
-ipython==8.2.0
+ipython==8.4.0
     # via ipdb
 jedi==0.18.1
     # via ipython
@@ -52,11 +52,11 @@ pure-eval==0.2.2
     # via stack-data
 py==1.11.0
     # via pytest
-pygments==2.11.2
+pygments==2.12.0
     # via ipython
-pyparsing==3.0.8
+pyparsing==3.0.9
     # via packaging
-pytest==7.1.1
+pytest==7.1.2
     # via
     #   -r requirements_dev.in
     #   pytest-cov
@@ -74,7 +74,7 @@ tomli==2.0.1
     # via
     #   coverage
     #   pytest
-traitlets==5.1.1
+traitlets==5.2.2.post1
     # via
     #   ipython
     #   matplotlib-inline
