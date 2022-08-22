@@ -20,5 +20,5 @@ class TestDatasources:
         assert match["name"] == datasource["name"]
         assert match["type"] == 'postgres'
         assert match["database"] == datasource["name"]
-        assert match["password"] == ""
         assert match["access"] == 'proxy'
+        assert match["readOnly"] == True
