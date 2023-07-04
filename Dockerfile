@@ -1,4 +1,4 @@
-FROM grafana/grafana:9.1.0
+FROM grafana/grafana:9.5.5-ubuntu
 
 USER root
 
@@ -10,15 +10,22 @@ ENV GF_PATHS_PLUGINS="/var/lib/grafana-plugins"
 RUN mkdir -p "$GF_PATHS_PLUGINS" && \
     chown -R grafana "$GF_PATHS_PLUGINS"
 
-RUN if [ $GF_INSTALL_IMAGE_RENDERER_PLUGIN = "true" ]; then \
-    echo "http://dl-cdn.alpinelinux.org/alpine/edge/community" >> /etc/apk/repositories && \
-    echo "http://dl-cdn.alpinelinux.org/alpine/edge/main" >> /etc/apk/repositories && \
-    echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories && \
-    # apk --no-cache upgrade && \
-    apk add --no-cache udev ttf-opensans chromium && \
-    rm -rf /tmp/* && \
-    rm -rf /usr/share/grafana/tools/phantomjs; \
-fi
+#RUN if [ $GF_INSTALL_IMAGE_RENDERER_PLUGIN = "true" ]; then \
+#    echo "http://dl-cdn.alpinelinux.org/alpine/edge/community" >> /etc/apk/repositories && \
+#    echo "http://dl-cdn.alpinelinux.org/alpine/edge/main" >> /etc/apk/repositories && \
+#    echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories && \
+#    # apk --no-cache upgrade && \
+#    apk add --no-cache udev ttf-opensans chromium && \
+#    rm -rf /tmp/* && \
+#    rm -rf /usr/share/grafana/tools/phantomjs; \
+#fi
+
+RUN apt update -y \
+    && apt upgrade -y \
+    && apt install -y --no-install-recommends udev  texlive-fonts-extra chromium-browser \
+    && apt autoremove -y \
+    && apt clean -y \
+    && rm -rf /var/lib/apt/lists/* \
 
 USER grafana
 
