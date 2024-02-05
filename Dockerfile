@@ -31,7 +31,7 @@ USER grafana
 
 # This env var has changed to the underlying, event though it is not documented: https://github.com/grafana/grafana-image-renderer/blob/2e721c160b0005ba4a16220c31c96d0a6349d5d8/src/plugin/v2/grpc_plugin.ts#L186
 ENV GF_PLUGIN_RENDERING_CHROME_BIN="/usr/bin/chromium-browser"
-ENV GF_SERVER_ROOT_URL="https://api.data.amsterdam.nl/waarnemingen/dashboard" \
+ENV GF_SERVER_ROOT_URL="https://api.data.amsterdam.nl/waarnemingen/dashboard"
 
 RUN if [ $GF_INSTALL_IMAGE_RENDERER_PLUGIN = "true" ]; then \
     grafana-cli \
